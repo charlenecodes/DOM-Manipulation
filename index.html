@@ -2,13 +2,27 @@
 <html lang="en">
   <head>
     <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
   </head>
   <body>
     <!-- Beginning of Code -->
-    <h1>Portfolio</h1>
-    <form>
-      <button type="submit">Click Me!</button>
+    <h1>Charlene's Portfolio</h1>
+    <div class="center">
+      <p id="empty">There are currently no projects</p>
+      
+        <div class="grid" id="submitted">
+          <!-- THIS IS WHERE WE WANT OUR IMAGES TO BE SUBMITTED -->
+        </div>
+      
+      <p>ADD PROJECTS BELOW!</p>
+      <br>
+    </div>
+    <form action="">
+      <legend>Image URL</legend>
+      <input name="image" type="url" id="url">
+      <button type="submit">Submit!</button>
     </form>
+    
     <!-- End of Code -->
     <script type="text/javascript" src="index.js"></script>
   </body>
