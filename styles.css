@@ -22,12 +22,7 @@ h1 {
 
 body {
   background: antiquewhite;
-}
-
-#submitted {
-  width: 230px;
-  height: 230px;
-  margin: 20px;
+  padding: 20px;
 }
 
 img {
@@ -39,15 +34,20 @@ img:hover {
   transform: matrix(1, 0, 0, 1, 4, -1);
 }
 
-legend {
-  padding-top: 8px;
-  padding-right: 16px;
-}
-
 form {
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
   margin-top: 200px;
+  gap: 20px; /* creates the space where we want it  */
+}
+
+.input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
 }
 
 .center {
@@ -97,4 +97,5 @@ button:hover {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
+  margin: 0 auto;
 }
