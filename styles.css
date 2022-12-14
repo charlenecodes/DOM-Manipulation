@@ -27,6 +27,16 @@ body {
 #submitted {
   width: 230px;
   height: 230px;
+  margin: 20px;
+}
+
+img {
+  border: 1.5px solid black;
+}
+
+img:hover {
+  box-shadow: 5px 5px 0px black;
+  transform: matrix(1, 0, 0, 1, 4, -1);
 }
 
 legend {
@@ -37,6 +47,7 @@ legend {
 form {
   display: flex;
   justify-content: center;
+  margin-top: 200px;
 }
 
 .center {
@@ -77,8 +88,9 @@ button:hover {
 }
 
 .photo-style {
-  height: 50px;
-  width: 50px;
+  object-fit: cover;
+  height: 200px;
+  width: 200px;
 }
 
 .grid {
