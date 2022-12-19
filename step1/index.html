@@ -7,9 +7,7 @@
   <body>
     <!-- Beginning of Code -->
     <h1>Charlene's Portfolio</h1>
-    <div class="center">
-      <p class="empty">There are currently no projects</p>
-    </div>
+    <p class="empty">There are currently no projects</p>
     <div class="grid" id="submitted">
       <!-- THIS IS WHERE WE WANT OUR IMAGES TO BE SUBMITTED -->
     </div>
@@ -19,7 +17,8 @@
       <!-- the things that we want to stay in one line needs to be in one container since we are doing a flex-direction column everything under will be shown as a column, unless you put them in a secondary container -->
       <p class="empty"> ADD PROJECTS BELOW!</p>
       <div class="input">
-        <label for="url">Image URL</label>
+        <label for="url">Image URL</label> 
+        <!-- the label needs to be matched with the id -->
         <input name="image" type="url" id="url">
         <button type="submit">Submit!</button>
       </div>

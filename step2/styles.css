@@ -1,0 +1,96 @@
+* {
+  background-color: antiquewhite;
+  box-sizing: border-box;
+  border: 0px;
+  margin: 0 auto; /* puts the left and right margin to equal so everything is centered */
+  color: black;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+h1 {
+  text-align: center;
+  margin: 25px;
+  margin-top: 60px;
+  font-size: 40px;
+}
+
+.empty {
+  text-align: center; /* needed to center the text */
+  margin: 25px;
+}
+
+body {
+  background: antiquewhite;
+  padding: 0px 220px; /* helpful to push all the photos where I want them since the area of the grid becomes smaller */
+}
+
+img {
+  border: 1.5px solid black;
+}
+
+img:hover {
+  box-shadow: 5px 5px 0px black;
+  transform: matrix(1, 0, 0, 1, 4, -1);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  gap: 20px; /* creates the space where we want it  */
+}
+
+.input {
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  gap: 3px;
+}
+
+/* the input box where the  */
+#url {
+  border: 1px solid black;
+  height: 34px;
+  width: 260px;
+  background-color: wheat;
+  border-radius: 2px;
+  margin-right: 5px;
+}
+
+button {
+  border: 1px solid black;
+  border-radius: 2px;
+  height: 34px;
+  background-color: white;
+  color: black;
+  font-weight: bold;
+  padding: 10px;
+}
+
+button:hover {
+  box-shadow: 5px 5px 0px black;
+  transform: matrix(1, 0, 0, 1, 4, -1);
+}
+
+.hide {
+  display: none;
+}
+
+.photo-style {
+  object-fit: cover;
+  height: 200px;
+  width: 200px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  row-gap: 20px;
+}
+
+/* img {
+  margin: auto; /* made the image centered inside the grid */
+} */

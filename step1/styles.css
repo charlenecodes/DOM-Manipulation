@@ -1,28 +1,27 @@
 * {
   background-color: antiquewhite;
-  margin: 0px;
   box-sizing: border-box;
   border: 0px;
-  margin: 0px;
+  margin: 0 auto; /* puts the left and right margin to equal so everything is centered */
   color: black;
   font-family: 'Roboto Condensed', sans-serif;
 }
 
 h1 {
   text-align: center;
-  margin: 15px;
+  margin: 25px;
   margin-top: 60px;
   font-size: 40px;
 }
 
-#empty {
-  text-align: center;
-  margin: 15px;
+.empty {
+  text-align: center; /* needed to center the text */
+  margin: 25px;
 }
 
 body {
   background: antiquewhite;
-  padding: 20px;
+  padding: 0px 220px; /* helpful to push all the photos where I want them since the area of the grid becomes smaller */
 }
 
 img {
@@ -39,26 +38,18 @@ form {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 200px;
+  margin-top: 20px;
   gap: 20px; /* creates the space where we want it  */
 }
 
 .input {
   display: flex;
-  justify-content: center;
+  justify-items: center;
   align-items: center;
-  gap: 8px;
+  gap: 3px;
 }
 
-.center {
-  display: flex;
-  flex-direction: column;
-  align-content: center;
-  justify-content: center; /* centers horizontally */
-  align-items: center; /* centers vertically */
-  margin: auto;
-}
-
+/* the input box where the  */
 #url {
   border: 1px solid black;
   height: 34px;
@@ -96,6 +87,10 @@ button:hover {
 .grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
-  margin: 0 auto;
+  gap: 10px;
+  row-gap: 20px;
 }
+
+/* img {
+  margin: auto; /* made the image centered inside the grid */
+} */

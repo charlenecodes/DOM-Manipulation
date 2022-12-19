@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <!-- Beginning of Code -->
+    <h1>Charlene's Portfolio</h1>
+    <p class="empty">There are currently no projects</p>
+    <div class="grid" id="submitted">
+      <!-- THIS IS WHERE WE WANT OUR IMAGES TO BE SUBMITTED -->
+    </div>
+      
+      
+    <form action=""> 
+      <!-- the things that we want to stay in one line needs to be in one container since we are doing a flex-direction column everything under will be shown as a column, unless you put them in a secondary container -->
+      <p class="empty"> ADD PROJECTS BELOW!</p>
+      <div class="input">
+        <label for="url">Image URL</label> 
+        <!-- the label needs to be matched with the id -->
+        <input name="image" type="url" id="url">
+        <button type="submit">Submit!</button>
+      </div>
+      
+    </form>
+    
+    <!-- End of Code -->
+    <script type="text/javascript" src="index.js"></script>
+  </body>
+</html>
