@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <!-- Beginning of Code -->
+    <h1>Charlene's Portfolio</h1>
+    <p class="empty">There are currently no projects</p>
+    <div class="grid" id="submitted">
+      <!-- THIS IS WHERE WE WANT OUR IMAGES TO BE SUBMITTED -->
+    </div>
+      
+    <p class="empty"> ADD PROJECTS BELOW!</p> 
+    <form action=""> 
+      <!-- the things that we want to stay in one line needs to be in one container since we are doing a flex-direction column everything under will be shown as a column, unless you put them in a secondary container -->
+      
+      <div class="input" id="title-container">
+        <label for="project-name">Project Title</label> 
+        <input type="text" id="project-name">
+      </div>
+      <div class="input" id="url-container">
+        <label for="url">Image URL</label>
+        <input type="url" id="url">
+      </div>
+      <div class="input" id="description-container">
+        <label for="description">Description</label> 
+        <textarea name="" id="description" cols="30" rows="10"></textarea>
+        <!-- cols and rows sets a default size for the description -->
+      </div>
+      <button type="submit">Submit!</button>
+    
+      
+    </form>
+    
+    <!-- End of Code -->
+    <script type="text/javascript" src="index.js"></script>
+  </body>
+</html>
