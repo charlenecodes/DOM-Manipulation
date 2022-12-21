@@ -1,17 +1,14 @@
 * {
   background-color: antiquewhite;
   box-sizing: border-box;
-  border: 0px;
-  margin: 0 auto; /* puts the left and right margin to equal so everything is centered */
   color: black;
   font-family: 'Roboto Condensed', sans-serif;
 }
 
 h1 {
   text-align: center;
-  margin: 25px;
-  margin-top: 60px;
   font-size: 40px;
+  margin-top: 60px;
 }
 
 .empty {
@@ -34,39 +31,53 @@ img:hover {
 }
 
 form {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-top: 20px;
-  gap: 20px; /* creates the space where we want it  */
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas: 
+  "name url"
+  "description description"
+  "button button";
+  gap: 15px; /* creates the space where we want it  */
 }
 
+/* the input class is for the divs of the input and label */
 .input {
   display: flex;
-  justify-items: center;
-  align-items: center;
-  gap: 3px;
+  flex-direction: column;
+  gap: 5px;
 }
 
-/* the input box where the  */
-#url {
+/* the input box where the user types in stuff */
+#url, #description, #project-name {
   border: 1px solid black;
-  height: 34px;
-  width: 260px;
   background-color: wheat;
   border-radius: 2px;
-  margin-right: 5px;
+  padding: 10px;
+}
+
+#url-container {
+  grid-area: url;
+}
+
+#title-container {
+  grid-area: name;
+}
+
+#description-container {
+  grid-area: description;
 }
 
 button {
   border: 1px solid black;
   border-radius: 2px;
-  height: 34px;
+  height: 35px;
+  width: 90px;
   background-color: white;
   color: black;
   font-weight: bold;
   padding: 10px;
+  grid-area: button;
 }
 
 button:hover {
@@ -83,14 +94,3 @@ button:hover {
   height: 200px;
   width: 200px;
 }
-
-.grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 10px;
-  row-gap: 20px;
-}
-
-/* img {
-  margin: auto; /* made the image centered inside the grid */
-} */
