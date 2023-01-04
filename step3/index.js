@@ -51,8 +51,6 @@ function handleSubmit(event) {
   // not needed, but helpful to see the array if the code is functioning as we want it
   console.log(projectsArray)
 
-  console.log("form was submitted!");
-
   addNewImage(project)
 
   // hides the message once the button is clicked since it means that it is no longer empty
@@ -68,7 +66,7 @@ function addNewImage(project) {
   let img = document.createElement("img");
   gridItem.append(img)
 
-  gridItem.classList.add("photo-style");
+  img.classList.add("photo-style");
   img.src = project.img; // we are now referring to the project object to get the url
   img.id = project.id;
   submitted.appendChild(gridItem);
@@ -79,19 +77,27 @@ function addNewImage(project) {
 submitted.addEventListener("click", chooseItem)
 
 function chooseItem(event) {
-  console.log(event.target.id)
-  
   // always do a console log of event to know what you are getting
-  // console.log(event)
+  console.log(event)
+  
+  // when a photo is clicked in the submitted grid, we are console logging which id is associated
+  console.log(event.target.id)
+
+  // this gives us the url of the clicked image, we want this to be in our featured section
+  console.log(event.target.currentSrc)
+  
+  
 
   // whatever was grabbed needs to be placed in the featured section
-  let featuredImg = document.querySelector("#featuredImg")
-  let featuredTitle = document.querySelector("featuredTitle")
+  let featuredImg = document.createElement("img")
+  let featuredTitle = document.createElement("h1")
   let featuredDescription = document.querySelector("featuredDescription")
 
   // makes sure that it will only return something if you click the image and not the empty spaces
   if(event.target.tagName === "IMG") {
-    console.log(event.target)
+    featuredImg.src = event.target.currentSrc
+    featured.append(featuredImg)
   }
 
+  //the problem is that it features an image, but it keeps adding it
 }
