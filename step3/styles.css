@@ -32,7 +32,6 @@ img:hover {
 
 form {
   display: grid;
-  grid-template-rows: repeat(3, 1fr);
   grid-template-columns: repeat(2, 1fr);
   grid-template-areas: 
   "name url"
@@ -101,3 +100,13 @@ button:hover {
   gap: 10px;
   row-gap: 20px;
 }
+
+#featured {
+  display: grid;
+  gap: 20px;
+  grid-template-areas: 
+  "clicked-img clicked-title"
+  "clicked-img clicked-description"
+  ;
+}
+
