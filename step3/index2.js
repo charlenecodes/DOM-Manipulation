@@ -49,7 +49,7 @@ function handleSubmit(event) {
   projectsArray.push(project)
 
   // not needed, but helpful to see the array if the code is functioning as we want it
-  console.log(projectsArray)
+  // console.log(projectsArray)
 
   addNewImage(project)
 
@@ -65,63 +65,35 @@ function addNewImage(project) {
   let gridItem = document.createElement("div")
   let img = document.createElement("img");
   gridItem.append(img)
-  img.classList.add("photo-style");
-  img.src = project.img; // we are now referring to the project object to get the url
 
-  // we create a new HTML attribute with ID, but why if we can just use the assigned ID?
-  img.id = project.id;
+  // callback function is being called here so it is not automatically triggered
+  img.addEventListener("click", () => { chooseItem(project.id)})
+
+  img.classList.add("photo-style");
+  img.src = project.img; 
   submitted.appendChild(gridItem);
 }
 
-// add an event listener to the whole grid so you don't need to do it one by one
-// that way the parent knows exactly which child is clicked
-submitted.addEventListener("click", chooseItem)
 
-function chooseItem(event) {
-  // always do a console log of event to know what you are getting
-  console.log(event)
-  // console.log(event.target)
-  
-  // when a photo is clicked in the submitted grid, we are console logging which id is associated
-  console.log(event.target.id)
 
-  // need to use filter to grab the image, title and description of the item associated with the id, we know that the id is given by event.target.id
-  // project is an arbitrary name that we give the one item and we access the id this way
-
-  // use a higher order function to find the project with the same project ID; once that is found, you have to use projectsArray[i].name / .description / .img in order to display what we want
-
+function chooseItem(clickedId) {
   let clickedProject = projectsArray.find((project) => {
-    console.log(typeof event.target.id, typeof project.id)
-    return project.id === Number(event.target.id)
+    return project.id === clickedId
   }) 
-  console.log(clickedProject) // the goal is for this to be a number, which the same as event.target.id
-
-  // this gives us the url of the clicked image, we want this to be in our featured section
-  // console.log(event.target.currentSrc)
-  
-  
-
-  // whatever was grabbed needs to be placed in the featured section
+   
   let featuredImg = document.createElement("img")
   let featuredTitle = document.createElement("h1")
   let featuredDescription = document.createElement("p")
 
-  console.log(event.target.tagName, featuredDescription, featuredTitle)
 
-  // makes sure that it will only return something if you click the image and not the empty spaces
-  if(event.target.tagName === "IMG") {
-    featuredImg.src = event.target.currentSrc
-    featuredImg.classList.add("featured-style")
-    featuredImg.classList.add("clicked-img")
-    featuredTitle.classList.add("clicked-title")
-    featuredDescription.classList.add("clicked-description")
-    featured.append(featuredImg)
-    featuredTitle.innerText = clickedProject.name
-    featured.append(featuredTitle)
-    featuredDescription.innerText = clickedProject.description
-    featured.append(featuredDescription)
-    console.log(featuredDescription, featuredTitle)
-  }
-
-  // the problem is that it features an image, but it keeps adding it and I can get the title and description to show up, but as undefined
+  featuredImg.src = clickedProject.img
+  featuredImg.classList.add("featured-style")
+  featuredImg.classList.add("clicked-img")
+  featuredTitle.classList.add("clicked-title")
+  featuredDescription.classList.add("clicked-description")
+  featured.append(featuredImg)
+  featuredTitle.innerText = clickedProject.name
+  featured.append(featuredTitle)
+  featuredDescription.innerText = clickedProject.description
+  featured.append(featuredDescription)
 }
